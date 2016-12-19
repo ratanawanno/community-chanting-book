@@ -2,6 +2,9 @@ VOL1=main-en-vol1
 VOL2=main-en-vol2
 PT_VOL1=main-pt-vol1
 
+SMALL_VOL1=small-en-vol1
+SMALL_VOL2=small-en-vol2
+
 LATEX=lualatex
 
 LATEX_OPTS=-interaction=nonstopmode -halt-on-error
@@ -32,6 +35,22 @@ vol2:
 	echo '\\contentsfinish' >> $(VOL2).fir.tmp
 	mv $(VOL2).fir.tmp $(VOL2).fir
 	$(LATEX) $(LATEX_OPTS) $(VOL2).tex;
+
+small-vol1:
+	cat $(SMALL_VOL1).fir | \
+		sed '/\\contentsfinish/d' | \
+		sort > $(SMALL_VOL1).fir.tmp
+	echo '\\contentsfinish' >> $(SMALL_VOL1).fir.tmp
+	mv $(SMALL_VOL1).fir.tmp $(SMALL_VOL1).fir
+	$(LATEX) $(LATEX_OPTS) $(SMALL_VOL1).tex;
+
+small-vol2:
+	cat $(SMALL_VOL2).fir | \
+		sed '/\\contentsfinish/d' | \
+		sort > $(SMALL_VOL2).fir.tmp
+	echo '\\contentsfinish' >> $(SMALL_VOL2).fir.tmp
+	mv $(SMALL_VOL2).fir.tmp $(SMALL_VOL2).fir
+	$(LATEX) $(LATEX_OPTS) $(SMALL_VOL2).tex;
 
 release:
 	@echo -n "Vol 1 x4...."

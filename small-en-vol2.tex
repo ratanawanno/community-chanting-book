@@ -1,0 +1,61 @@
+\documentclass[
+  babelLanguage=english,
+  final,
+  %showtrims,
+  %showwirebinding,
+  %webversion,
+]{chantingbook-small}
+
+\usepackage{local}
+
+\newcommand\theChapters{chapters-small/\theLanguage}
+
+\title{Chanting Book · Volume Two}
+\subtitle{Suttas, Parittas and Funeral Chanting}
+
+% NOTE This is the small edition.
+\ISBN{}
+\editionInfo{}
+
+\begin{document}
+
+\frontmatter
+
+\webcover{%
+\includegraphics[height=\paperheight]{vol2-webcover.jpg}%
+}
+
+\cleartoverso
+\input{./\theChapters/copyright.tex}
+
+\cleartorecto
+\tableofcontents*
+
+% NOTE: References are commented out, but keep them in the source for information.
+%\input{./chapters/abbreviations.tex}
+
+% FIXME first lines for Windows.
+%\clearpage
+%\chapterstyle{tocchapternoskip}
+%\listfirstlines*
+
+\mainmatter
+
+\input{./\theChapters/chapters-vol2.tex}
+
+\part{Appendix}
+
+\appendixsize
+
+\input{./\theChapters/pali-phonetics-and-pronunciation.tex}
+
+\input{./\theChapters/glossary.tex}
+
+\cleartorecto
+\input{./\theChapters/acknowledgments.tex}
+\clearpage
+\input{./\theChapters/copyright-details.tex}
+
+\end{document}
+
+% End of main.tex
