@@ -125,7 +125,8 @@
   Numbers=Lining,
 ]{AlegreyaXSansSC-Bold.otf}
 
-\newfontfamily\chapterTitleFont{Ubuntu-X-Medium.ttf}
+\newfontfamily\ubuntuXMedium{Ubuntu-X-Medium.ttf}
+\newcommand\chapterTitleFont{\ubuntuXMedium}
 \newfontfamily\sectionFont{Ubuntu-X-Medium.ttf}
 \newfontfamily\subSectionFont{Ubuntu-X-Medium.ttf}
 
@@ -135,10 +136,11 @@
 \newfontfamily\TOCpartTitleFont{Ubuntu-X-Medium.ttf}
 \newfontfamily\TOCchapterTitleFont{GentiumIncantation-Regular.ttf}
 
-\newfontfamily\instructionFont{AlegreyaXSansSC-Bold.otf}
+\newfontfamily\alegreyaXSansFont{AlegreyaXSansSC-Bold.otf}
+\newcommand\instructionFont{\alegreyaXSansFont}
 
-\newfontfamily\Calluna{Calluna-Regular.otf}
-\newfontfamily\CallunaSans{CallunaSansRegular.otf}
+%\newfontfamily\Calluna{Calluna-Regular.otf}
+%\newfontfamily\CallunaSans{CallunaSansRegular.otf}
 
 % font sizes
 

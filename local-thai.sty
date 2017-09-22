@@ -22,14 +22,17 @@
   \let\@listi\@listI}
 
 \newcommand\thaiText{%
+  \renewcommand\instructionFont{\thaiFont}%
   \thaiFont%
   \thaitextsize%
   \setlength{\parskip}{\thaiTextParskip}%
 }
 
 \renewcommand\resumeNormalText{%
+  \renewcommand\instructionFont{\alegreyaXSansFont}%
   \gentiumFont%
-  \normalsize%
+  %\normalsize%
+  \englishtextsize%
   \setlength{\parskip}{5pt}%
 }
 
