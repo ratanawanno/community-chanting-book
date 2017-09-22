@@ -1,0 +1,38 @@
+\ProvidesPackage{local-thai}
+
+\newfontfamily\gentiumFont[
+  ItalicFont=GentiumIncantation-Italic.ttf,
+  BoldFont=GenBkBasB.ttf,
+  BoldItalicFont=GenBkBasBI.ttf,
+  StylisticSet=2,
+]{GentiumIncantation-Regular.ttf}
+
+\newfontfamily\thaiFont{THSarabunNew.ttf}
+
+\newlength\thaiTextParskip
+\setlength{\thaiTextParskip}{9pt}
+
+\newcommand{\thaitextsize}{%
+  \@setfontsize\thaitextsize{12}{18}%
+  \abovedisplayskip 12\p@ \@plus3\p@ \@minus7\p@
+  \abovedisplayshortskip \z@ \@plus3\p@
+  \belowdisplayshortskip 6.5\p@ \@plus3.5\p@ \@minus3\p@
+  \belowdisplayskip \abovedisplayskip
+  \color{textbody}
+  \let\@listi\@listI}
+
+\newcommand\thaiText{%
+  \thaiFont%
+  \thaitextsize%
+  \setlength{\parskip}{\thaiTextParskip}%
+}
+
+\renewcommand\resumeNormalText{%
+  \gentiumFont%
+  \normalsize%
+  \setlength{\parskip}{5pt}%
+}
+
+\renewcommand\paliText{\resumeNormalText}
+
+\newcommand\thaiTitle{}

@@ -2,6 +2,8 @@
 *.aux
 *.log
 *.toc
+*.fls
+*.fdb_latexmk
 auto/
 fonts/Calluna-Regular.otf
 fonts/CallunaSansRegular.otf
@@ -16,3 +18,4 @@ pt-precepts-and-metta-sutta.pdf
 anapanasati-sheet-pali.pdf
 sumedharama-monastic-chants.pdf
 brazil-chants.pdf
+th-dhammacakka.pdf
